@@ -1,0 +1,19 @@
+$main-font: 'Inter';
+$duration: 0.3s;
+
+$grey-dark: #384556;
+$grey: #9AA6AA;
+$blue: #175CD3;
+$blue-text-link: #2594E5;
+
+$body-bg: #fff;
+$text-color: $grey-dark;
+
+$container-inner-width: 1320px;
+$container-padding-x: 23px;
+$container-padding-x-tablet: 23px;
+$container-padding-x-mobile: 23px;
+
+$container-max-width: calc(#{$container-inner-width} + 2*#{$container-padding-x});
+$tablet-max-width: 1023px;
+$mobile-max-width: 767px;

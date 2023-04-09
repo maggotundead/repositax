@@ -1,0 +1,142 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    .container {
+        background-color: #fff;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 88px;
+    }
+    .logo {
+        position: relative;
+        z-index: 3;
+        max-width: 240px;
+        @include mobile {
+            max-width: 180px;
+            margin-right: 24px;
+        }
+        @include maxw480 {
+            margin: 0;
+        }
+        img {
+            width: 100%;
+        }
+    }
+
+    .search {
+        margin-right: 48px;
+        display: block;
+        width: 100%;
+        max-width: 240px;
+        position: relative;
+        margin-left: auto;
+        @include mobile {
+            margin: 0 auto;
+        }
+        @include maxw480 {
+            display: none;
+        }
+        &::before {
+            content: '';
+            width: 16px;
+            height: 17px;
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 17'%3E%3Cpath d='M10.9835 10.7203C11.8753 9.6395 12.4386 8.2533 12.4386 6.72614C12.4386 3.29589 9.64576 0.5 6.21929 0.5C2.79281 0.5 0 3.29589 0 6.72614C0 10.1564 2.79281 12.9523 6.21929 12.9523C7.72131 12.9523 9.12945 12.4119 10.209 11.4956L15.0436 16.3355C15.161 16.453 15.3018 16.5 15.4426 16.5C15.5834 16.5 15.7242 16.453 15.8416 16.3355C16.0528 16.1241 16.0528 15.7482 15.8416 15.5367L10.9835 10.7203ZM6.19582 11.8245C3.37954 11.8245 1.10304 9.54552 1.10304 6.72614C1.10304 3.90676 3.37954 1.62775 6.19582 1.62775C9.0121 1.62775 11.2886 3.90676 11.2886 6.72614C11.2886 9.54552 9.0121 11.8245 6.19582 11.8245Z' fill='%239AA6AA'/%3E%3C/svg%3E%0A");
+        }
+        input {
+            display: block;
+            width: 100%;
+            height: 32px;
+            border: 1px solid $grey;
+            border-radius: 30px;
+            padding-left: 40px;
+            padding-right: 16px;
+            font-size: 14px;
+            color: $grey;
+        }
+    }
+
+    .btn {
+        margin-right: 32px;
+        @include mobile {
+            margin-right: 0;
+            margin-left: 24px;
+            min-width: initial;
+        }
+        @include maxw480 {
+            margin: 0;
+        }
+    }
+}
+
+// .burger-btn {
+//     display: none;
+//     width: 32px;
+//     height: 32px;
+//     z-index: 2;
+//     position: relative;
+//     background-color: transparent;
+//     flex-shrink: 0;
+//     transition: $duration;
+//     z-index: 3;
+//     @include tablet {
+//         display: block;
+//     }
+//     span {
+//         display: block;
+//         position: absolute;
+//         left: 0;
+//         width: 32px;
+//         height: 2px;
+
+//         opacity: 1;
+//         transform: rotate(0);
+//         transition: $duration;
+//         border-radius: 2px;
+//         &:nth-child(1) {
+//             top: 10px;
+//         }
+//         &:nth-child(2),
+//         &:nth-child(3) {
+//             top: 15px;
+//         }
+//         &:nth-child(4) {
+//             top: 20px;
+//         }
+//     }
+// }
+
+// .mobile-menu-open {
+//     .header {
+//     }
+
+//     .burger-btn {
+//         span {
+//             &:nth-child(1),
+//             &:nth-child(4) {
+//                 top: 17px;
+//                 width: 0%;
+//                 left: 50%;
+//             }
+//             &:nth-child(2),
+//             &:nth-child(3) {
+//                 width: 26px;
+//                 left: -2px;
+//             }
+//             &:nth-child(2) {
+//                 transform: rotate(45deg);
+//             }
+//             &:nth-child(3) {
+//                 transform: rotate(-45deg);
+//             }
+//         }
+//     }
+// }
