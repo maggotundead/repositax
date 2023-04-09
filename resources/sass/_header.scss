@@ -61,6 +61,12 @@
             padding-right: 16px;
             font-size: 14px;
             color: $grey;
+            transition: $duration;
+            &:hover,
+            &:focus {
+                filter: drop-shadow(2px 2px 20px rgba(23, 92, 211, 0.9));
+                border-color: $blue;
+            }
         }
     }
 

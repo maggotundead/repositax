@@ -85,9 +85,15 @@
         text-align: center;
         width: 100%;
         min-height: 270px;
+        transition: $duration;
         @include mobile {
             padding: 24px;
             min-height: initial;
+        }
+        &:hover {
+            // filter: drop-shadow(2px 4px 20px rgba(23, 92, 211, 0.9));
+            box-shadow: 2px 2px 20px rgba(23, 92, 211, 0.09);
+            border-color: $blue;
         }
         &-icon {
             display: flex;
@@ -97,7 +103,8 @@
             border-radius: 50%;
             height: 64px;
             width: 64px;
-            svg {
+            svg,
+            img {
                 width: 48px;
                 height: 48px;
             }
@@ -174,7 +181,7 @@
         align-items: center;
         text-align: center;
 
-        &.cta-item {
+        &.cta-elem {
             border: 1px solid #9AA6AA;
             border-radius: 16px;
             max-width: 745px;
@@ -351,6 +358,7 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 24px;
+        transition: $duration;
         @include mobile {
             width: 100%;
             flex-direction: column;

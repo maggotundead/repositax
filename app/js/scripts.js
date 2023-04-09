@@ -71,17 +71,57 @@ faqItems.forEach( item => {
     });
 });
 
-const videos = document.querySelectorAll('.video-item');
-videos.forEach( video => {
-    const videoThumb = video.querySelector('img');
-    const videoFrame = video.querySelector('iframe');
-    const videoFrameUrl = videoFrame.getAttribute('data-src');
+const ctaVideo = document.querySelector('.cta-elem');
+if (ctaVideo) {
+    const ctaVideoThumb = ctaVideo.querySelector('img');
+    const ctaVideoFrame = ctaVideo.querySelector('iframe');
+    const ctaVideoFrameUrl = ctaVideoFrame.getAttribute('data-src');
 
-    videoThumb.addEventListener('click', () => {
-        video.classList.add('is-frame-active');
-        videoFrame.src = videoFrameUrl
+    ctaVideoThumb.addEventListener('click', () => {
+        ctaVideo.classList.add('is-frame-active');
+        ctaVideoFrame.src = ctaVideoFrameUrl;
+    });
+}
+
+const thumbVideos = document.querySelectorAll('.thumb-elem');
+const contactModal = document.getElementById('contact-modal');
+
+const videoModal = document.getElementById('video-modal');
+const videoModalFrame = videoModal.querySelector('iframe');
+
+if (thumbVideos) {
+    thumbVideos.forEach( video => {
+        const videoThumb = video.querySelector('img');
+        const videoUrl = videoThumb.getAttribute('data-video-src');
+
+        videoThumb.addEventListener('click', () => {
+            console.log(videoUrl);
+            videoModal.classList.add('active');
+            videoModalFrame.src = videoUrl;
+        });
+    });
+}
+
+document.querySelectorAll('.contact-btn').forEach( btn => btn.addEventListener( 'click', () => contactModal.classList.add('active') ) );
+document.querySelectorAll('.modal-close').forEach( btn => {
+    btn.addEventListener( 'click', () => {
+        document.querySelectorAll('.modal').forEach( modal => {
+            modal.classList.remove('active');
+            if (videoModalFrame.src) {
+                videoModalFrame.src = '';
+            }
+        });
+    })
+});
+document.querySelectorAll('.modal-overlay').forEach( overlay => {
+    overlay.addEventListener( 'click', () => {
+        overlay.closest('.modal').classList.remove('active');
+        if (videoModalFrame.src) {
+            videoModalFrame.src = '';
+        }
     });
 });
+
 
 
 
@@ -109,8 +149,3 @@ videos.forEach( video => {
 // }
 
 
-// modal
-const contactModal = document.getElementById('contact-modal');
-document.querySelectorAll('.contact-btn').forEach( btn => btn.addEventListener( 'click', () => contactModal.classList.add('active') ) );
-document.querySelectorAll('.modal-close').forEach( btn => btn.addEventListener( 'click', () => document.querySelectorAll('.modal').forEach( modal => modal.classList.remove('active') ) ) );
-document.querySelectorAll('.modal-overlay').forEach( overlay => overlay.addEventListener( 'click', () => overlay.closest('.modal').classList.remove('active') ) ) ;

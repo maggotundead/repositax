@@ -28,9 +28,9 @@
         position: relative;
         display: flex;
         z-index: 2;
-        width: css-min(calc(100% - 48px), 480px);
-        height: css-min(calc(100% - 128px), 560px);
-        margin: auto 24px 24px auto;
+        // width: css-min(calc(100% - 48px), 480px);
+        // height: css-min(calc(100% - 128px), 560px);
+        // margin: auto 24px 24px auto;
     }
     &-content {
         display: flex;
@@ -169,6 +169,37 @@
             background-color: white;
             color: white;
             font-size: 20px;
+        }
+    }
+}
+
+#contact-modal {
+    .modal-body {
+        width: css-min(calc(100% - 48px), 480px);
+        height: css-min(calc(100% - 128px), 560px);
+        margin: auto 24px 24px auto;
+    }
+}
+
+#video-modal {
+    .modal-body {
+        width: css-min(calc(100% - 48px), 744px);
+        margin: 160px auto auto;
+    }
+    iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+    .modal-close {
+        width: 32px;
+        height: 32px;
+        top: -20px;
+        right: -44px;
+        color: #000;
+        position: absolute;
+        @include tablet {
+            top: -44px;
+            right: 0;
         }
     }
 }
