@@ -156,6 +156,12 @@
     .container {
         max-width: calc(1206px + 2*#{$container-padding-x});
     }
+    h1 {
+        margin-bottom: 48px;
+        @include mobile {
+            margin-bottom: 24px;
+        }
+    }
     // .videos-list {
     //     margin-top: 64px;
     //     margin-top: 48px;
@@ -338,25 +344,25 @@
         max-width: calc(1206px + 2*#{$container-padding-x});
     }
 
-    .instructions-group {
-        &:not(:last-child) {
-            margin-bottom: 80px;
-            @include tablet {
-                margin-bottom: 64px;
-            }
-        }
-        // &-list {
-        //     margin-top: 42px;
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     justify-content: center;
-        //     gap: 32px;
-        //     @include mobile {
-        //         margin-top: 24px;
-        //         gap: 24px;
-        //     }
-        // }
-    }
+    // .instructions-group {
+    //     &:not(:last-child) {
+    //         margin-bottom: 80px;
+    //         @include tablet {
+    //             margin-bottom: 64px;
+    //         }
+    //     }
+    //     // &-list {
+    //     //     margin-top: 42px;
+    //     //     display: flex;
+    //     //     flex-wrap: wrap;
+    //     //     justify-content: center;
+    //     //     gap: 32px;
+    //     //     @include mobile {
+    //     //         margin-top: 24px;
+    //     //         gap: 24px;
+    //     //     }
+    //     // }
+    // }
 
     // .instruction-item {
     //     width: calc(50% - 16px);
@@ -428,18 +434,32 @@
     // }
 }
 
-.cards-list {
-    margin-top: 48px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    // gap: 32px;
-    gap: 40px 32px;
-    width: 100%;
-    @include mobile {
-        margin-top: 24px;
-        // gap: 24px;
-        gap: 32px;
+.media-group {
+    &:not(:last-child) {
+        margin-bottom: 80px;
+        @include tablet {
+            margin-bottom: 64px;
+        }
+    }
+    &-list {
+        // margin-top: 48px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        // gap: 32px;
+        gap: 40px 32px;
+        width: 100%;
+        @include mobile {
+            // margin-top: 24px;
+            // gap: 24px;
+            gap: 32px;
+        }
+        &:not(:first-child) {
+            margin-top: 48px;
+            @include mobile {
+                margin-top: 24px;
+            }
+        }
     }
 }
 
@@ -456,6 +476,9 @@
     @include mobile {
         width: 100%;
         flex-direction: column;
+    }
+    &:only-child {
+        margin-right: auto;
     }
     &-title {
         display: flex;
