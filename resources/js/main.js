@@ -1,54 +1,54 @@
-new Swiper('#video-swiper', {
-    slidesPerView: 'auto',
-    loop: false,
-    draggable: true,
-    // spaceBetween: 30,
-    // noSwiping: true,
-    // autoplay: {
-    //     disableOnInteraction: true,
-    //     pauseOnMouseEnter: true,
-    // },
-    mousewheel: {
-        forceToAxis: true,
-    },
-    slideToClickedSlide: true,
-    keyboard: {
-        enabled: true,
-        onlyInViewport: true
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-    },
-    mousewheel: {
-        forceToAxis: true,
-    },
-    slideToClickedSlide: false,
-    keyboard: {
-        enabled: true,
-        onlyInViewport: true
-    },
-    navigation: {
-        prevEl: '#prev-video-btn',
-        nextEl: '#next-video-btn',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-    },
+// new Swiper('#video-swiper', {
+//     slidesPerView: 'auto',
+//     loop: false,
+//     draggable: true,
+//     // spaceBetween: 30,
+//     // noSwiping: true,
+//     // autoplay: {
+//     //     disableOnInteraction: true,
+//     //     pauseOnMouseEnter: true,
+//     // },
+//     mousewheel: {
+//         forceToAxis: true,
+//     },
+//     slideToClickedSlide: true,
+//     keyboard: {
+//         enabled: true,
+//         onlyInViewport: true
+//     },
+//     pagination: {
+//         el: '.swiper-pagination',
+//         type: 'bullets',
+//         clickable: true,
+//     },
+//     mousewheel: {
+//         forceToAxis: true,
+//     },
+//     slideToClickedSlide: false,
+//     keyboard: {
+//         enabled: true,
+//         onlyInViewport: true
+//     },
+//     navigation: {
+//         prevEl: '#prev-video-btn',
+//         nextEl: '#next-video-btn',
+//     },
+//     pagination: {
+//         el: '.swiper-pagination',
+//         type: 'bullets',
+//         clickable: true,
+//     },
 
-    // breakpoints: {
-    //     0: {
-    //         slidesPerView: 1
-    //     },
-    //     //$tablet-width
-    //     1200: {
-    //         slidesPerView: 'auto',
-    //     },
-    // }
-});
+//     // breakpoints: {
+//     //     0: {
+//     //         slidesPerView: 1
+//     //     },
+//     //     //$tablet-width
+//     //     1200: {
+//     //         slidesPerView: 'auto',
+//     //     },
+//     // }
+// });
 
 const faqItems = document.querySelectorAll('.faq-item');
 faqItems.forEach( item => {
